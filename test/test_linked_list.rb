@@ -5,8 +5,9 @@ class LinkedListItemTest < Test::Unit::TestCase
 
   def test_06_add_item_get_item
     ll = LinkedList.new
-    ll.add_item("foo")
-    assert_equal("foo", ll.get(0))
+    payload = "foo"  
+    ll.add_item(payload)
+    assert_equal(payload, ll.get(0))
   end
 
   def test_07_add_multiple_items_get_item
@@ -45,11 +46,11 @@ class LinkedListItemTest < Test::Unit::TestCase
     ll = LinkedList.new
     ll.add_item("foo")
     ll.add_item("bar")
-    ll.add_item("grille")
+    ll.add_item("grille")  
     assert_equal("grille", ll.last)
   end
 
-  def test_13_to_s_an_empty_linked_list
+  def test_13_to_s_an_empty_linked_list 
     ll = LinkedList.new
     assert_equal("| |", ll.to_s)
   end
@@ -145,7 +146,7 @@ class LinkedListItemTest < Test::Unit::TestCase
     assert_equal '| foo, bar, dog, elephant |', ll.to_s
   end
 
-  def test_24_remove_item_from_end_of_list
+  def test_25_remove_item_from_end_of_list
     ll = LinkedList.new
     ll.add_item("foo")
     ll.add_item("bar")
@@ -157,7 +158,7 @@ class LinkedListItemTest < Test::Unit::TestCase
     assert_equal '| foo, bar, grille, dog |', ll.to_s
   end
 
-  def test_25_remove_item_that_doesnt_exist
+  def test_26_remove_item_that_doesnt_exist
     ll = LinkedList.new
     assert_raise IndexError do
       ll.remove(1)

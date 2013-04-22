@@ -1,13 +1,13 @@
 require 'test/unit'
-require 'linked_list_item'
+require 'linked_list_item'  
 
-class LinkedListItemTest < Test::Unit::TestCase
+class LinkedListItemTest < Test::Unit::TestCase 
 
   def test_01_item_stores_payload
     lli = LinkedListItem.new("foo")
     assert_equal("foo", lli.payload)
   end
-
+ 
   def test_02_add_next_list_item
     lli1 = LinkedListItem.new("foo")
     lli2 = LinkedListItem.new("bar")
