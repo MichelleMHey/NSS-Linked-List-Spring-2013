@@ -61,13 +61,24 @@ class LinkedList
 
   # ========= Bonus ========== #
 
-  def [](payload)
-  end
+  # def [](payload)
+  # end
 
-  def []=(n, payload)
-  end
+  # def []=(n, payload)
+  # end/
 
-  def remove(n)
+  # def remove(n)
+  # end
+
+  def indexOf(index_item)
+    item = @first_item
+    size.times do |index|  
+      if item.payload == index_item
+        return index # explicit return breaks out of loops and method
+      end
+      item = item.next_list_item
+    end
+    nil
   end
 
 end
