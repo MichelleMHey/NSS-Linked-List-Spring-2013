@@ -183,7 +183,7 @@ class LinkedListItemTest < Test::Unit::TestCase
     assert_equal(1, ll.indexOf("bar"))
   end
 
-  def test_28_index_of_last_item
+  def test_28_index_of_last_item  
     ll = LinkedList.new()
     ll.add_item("foo")
     ll.add_item("bar")
