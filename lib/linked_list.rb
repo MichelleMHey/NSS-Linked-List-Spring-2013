@@ -81,4 +81,33 @@ class LinkedList
     nil
   end
 
+#sort test
+
+  def sorted?
+    item = @first_item
+    (size-1).times do
+      if item <= item.next_list_item
+        item = item.next_list_item 
+      end
+      return false
+    end
+    true
+  end
+
+  def sort(list)
+    
+  end
+
+  # This is a helper I implemented
+  def swap_with_next(node_a)
+    node_b = node_a.next_list_item
+    node_c = node_b.next_list_item
+    node_a.next_list_item= node_c
+    node_b.next_list_item= node_a
+    node_b
+  end
+
+# Call this method like this
+# node.next_list_item= swap_with_next node.next_list_item
+
 end
