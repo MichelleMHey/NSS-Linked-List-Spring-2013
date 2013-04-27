@@ -12,7 +12,7 @@ class LinkedList
       else
         current_item.next_list_item= new_node
       end
-      current_item = new_node
+      current_item = new_node 
     end
   end
  
@@ -28,20 +28,6 @@ class LinkedList
       final_item.next_list_item = next_item
     end
   end 
-
-  # def get_item(n)
-  #   raise IndexError if n < 0
-  #   item = @first_item
-  #   n.times do
-  #     raise IndexError if item.nil?
-  #     item = item.next_list_item
-  #   end
-  #   item
-  # end
-
-  # def get(n)
-  #   get_item(n).payload
-  # end
 
   def get(n)
     item = @first_item
@@ -156,8 +142,6 @@ class LinkedList
     self
   end
 
-# Call this method like this
-# node.next_list_item= swap_with_next node.next_list_item
   def swap_with_next(node_a)
     node_b = node_a.next_list_item
     node_c = node_b.next_list_item
@@ -165,22 +149,5 @@ class LinkedList
     node_b.next_list_item= node_a
     node_b
   end
-
-  # def swap_with_next i #0
-  #   current_item = get_item(i)
-  #   next_item = get_item(i+1)
-
-  #   if i - 1 >= 0
-  #     previous_item = get_item(i-1) # Error
-  #     previous_item.next_list_item = next_item
-  #   else
-  #     @first_item = next_item
-  #   end
-
-  #   current_item.next_list_item = next_item.next_list_item
-  #   next_item.next_list_item = current_item
-  #   # @first_item = next_item
-  # end
-
 
 end

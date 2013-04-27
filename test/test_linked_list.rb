@@ -289,7 +289,7 @@ class LinkedListItemTest < Test::Unit::TestCase
     sortedll = ll.sort
     assert_equal( "| abba, adda, bar, foo, grille |", sortedll.to_s)
   end
-
+ 
   def test_46_sort_list_with_multiple_types
     ll = LinkedList.new(:b, "foo", 1, "bar", 2)
     sortedll = ll.sort
