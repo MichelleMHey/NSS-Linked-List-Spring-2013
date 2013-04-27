@@ -18,6 +18,13 @@ class LinkedListItemTest < Test::Unit::TestCase
     assert_equal("grille", ll.get(2))
   end
 
+  # def test_08a_get_negative_index_raises_index_error
+  #   ll = LinkedList.new("a")
+  #   assert_raise IndexError do
+  #     ll.get(-1)
+  #   end
+  # end
+
   def test_08_get_item_that_doesnt_exist
     ll = LinkedList.new
     assert_raise IndexError do
@@ -217,7 +224,7 @@ class LinkedListItemTest < Test::Unit::TestCase
     assert_equal(nil, ll.indexOf("foo"))
   end
 
-  # sorting test
+  # ========= Sort Test ========== #
 
   def test_33_empty_list_sorted
     ll = LinkedList.new()
@@ -295,5 +302,29 @@ class LinkedListItemTest < Test::Unit::TestCase
     sortedll = ll.sort
     assert_equal( "| 1, 2, bar, foo, b |", sortedll.to_s)
   end
+
+  # def test_47_swap_middle_items
+  #   ll = LinkedList.new("a","b","c","d")
+  #   assert_equal "| a, b, c, d |",ll.to_s
+  #   ll.swap_with_next(1)
+  #   assert_equal "| a, c, b, d |",ll.to_s
+  # end
+
+  # def test_48_swap_first_item
+  #   ll = LinkedList.new("a","b","c","d")
+  #   assert_equal "| a, b, c, d |",ll.to_s
+  #   ll.swap_with_next(0)
+  #   assert_equal "| b, a, c, d |",ll.to_s
+  # end
+
+  # def test_49_swap_first_item
+  #   ll = LinkedList.new("a","b","c","d")
+  #   assert_equal "| a, b, c, d |",ll.to_s
+  #   ll.swap_with_next(2)
+  #   assert_equal "| a, b, d, c |",ll.to_s
+  #   assert_raise IndexError do
+  #     ll.swap_with_next(3)
+  #   end
+  # end
 
 end
